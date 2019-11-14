@@ -1,0 +1,37 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Cliente</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input [(ngModel)]="reservacion.firstName" id="firstname" name="firstname" type="text"
+                        class="form-control" id="firstname">
+                </div>
+                <div class="form-group">
+                    <label>Apellido</label>
+                    <input [(ngModel)]="reservacion.lastName" name="lastname" id="lastname" type="text"
+                        class="form-control" id="lastname">
+
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input [(ngModel)]="reservacion.email" name="email" id="email" type="text" class="form-control"
+                        id="email">
+                </div>
+
+                <div class="form-group">
+                    <label>Número de telefono</label>
+                    <input [(ngModel)]="reservacion.phoneNumber" name="phonenumber" id="phonenumber" type="text"
+                        class="form-control" id="phonenumber">
+                </div>
+
+                <button (click)="Actualizar(reservacion)" class="btn btn-outline-danger">Actualizar</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>

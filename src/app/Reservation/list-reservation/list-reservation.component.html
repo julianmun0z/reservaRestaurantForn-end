@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="background-color:rgb(3, 170, 226); ">
+            <h3 style="color: white">Facturas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>NOMBRE CLIENTE</th>
+                        <th>APELLIDO CLIENTE</th>
+                        <th>FECHA RESERVACION </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let reservacion of reservacion" class="text-center">
+                        <td>{{reservacion.firstName}}</td>
+                        <td>{{reservacion.lastName}}</td>
+                        <td>{{reservacion.reservationDate |date:'dd/MM/yyyy'}}</td>
+                        <td>
+                            <button (click)="Edit(reservacion)" class="btn btn-primary"
+                                style="margin-right: 3%">Editar</button>
+
+                            <button (click)="Detalle(reservacion)" class="btn btn-info"
+                                style="margin-right: 3%">Detalle</button>
+                                <button (click)="Eliminar(reservacion)" class="btn btn-danger"
+                               >Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

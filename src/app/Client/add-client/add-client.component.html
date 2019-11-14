@@ -1,0 +1,33 @@
+<div class="container col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>Agregar Cliente</h3>
+            </div>
+            <div class="card-body">
+               <form action="">
+                    
+                   <div class="form-group">
+                      
+                       <label>Nombre</label>
+                       <input [(ngModel)]="clientEntity.firstName" name="firstname" type="text" class="form-control" id="firstname">
+                   </div>
+                   <div class="form-group">
+                        <label >Apellido</label>
+                        <input [(ngModel)]="clientEntity.lastName" name="lastname" type="text" class="form-control" id="lastname">
+                        
+                    </div>
+                    <div class="form-group">
+                            <label >E-mail</label>
+                            <input [(ngModel)]="clientEntity.email" name="email" type="text" class="form-control" id="email">
+                        </div>
+                    <div class="form-group">
+                            <label >Número de telefono</label>
+                            <input [(ngModel)]="clientEntity.phoneNumber" name="phonenumber" type="text" class="form-control" id="phonenumber">
+                        </div>
+                   <button (click)="Guardar()" class="btn btn-outline-danger">Guardar</button>
+
+               </form>
+                    
+            </div>
+        </div>
+    </div>

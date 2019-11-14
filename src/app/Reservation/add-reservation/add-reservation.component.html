@@ -1,0 +1,73 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header" style="background-color:rgb(3, 170, 226)">
+            <h3 class="colore">Generar Reservas</h3>
+        </div>
+
+        <div class="card-body">
+
+            <form action="">
+                <div class="form-group">
+                    <h5>Nombre</h5>
+                    <input [(ngModel)]="reservacion.firstName" name="firstname" type="text" class="form-control"
+                        id="firstname">
+                    <label class="alertReserv" *ngIf="reservacion.firstName == '' || reservacion.firstName == null">El
+                        nombre es un campo obligatorio*</label>
+
+                </div>
+
+                <div class="form-group">
+                    <h5>Apellido</h5>
+                    <input [(ngModel)]="reservacion.lastName" name="lastname" type="text" class="form-control"
+                        id="lastname">
+                    <label class="alertReserv" *ngIf="reservacion.lastName == ''|| reservacion.lastName == null">El
+                        apellido es un campo obligatorio*</label>
+
+                </div>
+                <div class="form-group">
+                    <h5>E-mail</h5>
+                    <input [(ngModel)]="reservacion.email" name="email" type="text" class="form-control" id="email">
+                    <label class="alertReservEmail" *ngIf="reservacion.email == ''|| reservacion.email == null">El
+                        E-mail es
+                        un campo obligatorio*</label>
+                </div>
+                <div class="form-group">
+                    <h5>Número de teléfono</h5>
+                    <input [(ngModel)]="reservacion.phoneNumber" name="phonenumber" type="text" class="form-control"
+                        id="phonenumber">
+
+                </div>
+
+
+                <div class="form-group">
+                    <h5>Fecha de reserva</h5>
+                    <td></td>
+                    <a [title]="'si la reserva es un día viernes o sábado se debe generar con 15 días de anticipación'">
+                        <input [(ngModel)]="reservacion.reservationDate" name="reservationdate" type="date"
+                            class="form-control" id="reservationdate" min="2019-11-05"></a>
+                    <label class="alertReservDate"
+                        *ngIf="reservacion.reservationDate == ''|| reservacion.reservationDate == null">La fecha de la
+                        reserva es un campo obligatorio*</label>
+
+                </div>
+                <div class="form-group">
+                    <h5>Número de personas para la reserva</h5>
+                    <input [(ngModel)]="reservacion.numberPeople" name="numberpeople" type="number" class="form-control"
+                        id="numberpeople">
+                    <label class="alertReservNunPeople"
+                        *ngIf="reservacion.numberPeople == ''|| reservacion.numberPeople == null">El número de personas
+                        es un campo obligatorio*</label>
+
+                </div>
+                <div class="form-group">
+                    <h5>Decoración</h5>
+                    <input [(ngModel)]="reservacion.decor" name="decor" type="checkbox" value="true"
+                        class="form-control" id="decor">
+                </div>
+
+                <button (click)="Guardar()" class="btn btn-primary btn-lg btn-block">Guardar</button>
+            </form>
+
+        </div>
+    </div>
+</div>

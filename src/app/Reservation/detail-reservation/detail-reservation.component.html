@@ -1,0 +1,75 @@
+<div class="container col-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h3> Factura </h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <table class="table ">
+                <div class="">
+                        <th><label for="">Nº FACTURA:</label></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th><label >{{reservation.id}}</label></th>
+                </div>
+               
+                <div class="form-group">
+                    <th> <label>NOMBRE CLIENTE:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    
+                    <th > <label style="margin-left: 10px">{{reservation.firstName}}
+                            {{reservation.lastName}}</label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">Email:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label style="margin-left: 10px">{{reservation.email}} </label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">NUMERO DE PERSONAS:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label style="margin-left: 10px">{{reservation.numberPeople}} </label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">FECHA DE LA RESERVA:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th> <label
+                            style="margin-left: 10px">{{reservation.reservationDate |date:'dd/MM/yyyy'}}
+                        </label></th>
+                </div>
+                <div class="form-group">
+                    <th> <label for="">DIA RESERVA:</label></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    
+                    <th> <label style="margin-left: 10px">{{reservation.reservationDate |date:'EEEE'}}
+                        </label></th>
+                </div>
+                <app-detail-client> </app-detail-client>
+
+                
+                <button (click)="Atras(clientEntity)" class="btn btn-primary btn-lg btn-block">Atras</button>
+            </table>
+            </form>
+
+        </div>
+    </div>
+</div>
